@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rmogp"
+version = "0.1.0"
+description = "Outlier-robust multi-output Gaussian processes (R-MOGP)"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Joshua Rooijakkers" }]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "scipy",
+    "scikit-learn",
+    "tensorflow>=2.15",
+]
+
+[project.optional-dependencies]
+baselines = ["gpflow>=2.9", "tf-keras"]
+experiments = [
+    "rmogp[baselines]",
+    "matplotlib",
+    "pandas",
+    "openpyxl",
+    "tqdm",
+]
+
+[tool.setuptools]
+packages = ["rmogp"]

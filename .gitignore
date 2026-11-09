@@ -1,0 +1,23 @@
+# Local notes
+CLEANUP_PLAN.md
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Experiment outputs and downloaded data
+figures/
+results/
+experiments/*/data/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+~$*
+.vscode/
+
+# Local dev tools
+.dev/
